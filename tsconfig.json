@@ -4,6 +4,7 @@
     "checkJs": true,
     "alwaysStrict": true,
     "noEmit": true,
+    "skipLibCheck": true,
   },
   "files": [
     "src/main.js"

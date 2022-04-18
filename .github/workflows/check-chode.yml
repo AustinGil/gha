@@ -24,6 +24,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Static Analysis
+        run: npm run ts
+
       - name: Test
         run: npm test
 
