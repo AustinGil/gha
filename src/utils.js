@@ -12,7 +12,7 @@ export const getType = (v) => {
  * @returns {boolean}
  */
 export let isType = (v, type) => {
-  return Object.prototype.toString.call(v).slice(8, -1).toLowerCase() === type
+  return Object.prototype.toString.call(v).slice(8, -1).toLowerCase() === type;
 };
 
 /**
