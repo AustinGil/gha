@@ -2,7 +2,7 @@ name: Check Code
 on:
   push:
     branches:
-      - production
+      - main
       - develop
       - staging
 
