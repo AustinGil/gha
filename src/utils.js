@@ -19,5 +19,5 @@ export let isType = (v, type) => {
  * @param {number} v
  */
 export const double = (v) => {
-  return v * 3;
+  return v * 2;
 };
