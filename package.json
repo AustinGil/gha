@@ -6,7 +6,7 @@
     "lint": "eslint src",
     "ts": "tsc",
     "test": "vitest",
-    "audit": "concurrently 'npm run lint' 'npm run ts' 'npm run test -- run' --raw --kill-others"
+    "audit": "concurrently 'npm run lint' 'npm run ts' 'npm run test -- run' --kill-others"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
