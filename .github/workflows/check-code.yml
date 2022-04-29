@@ -21,5 +21,15 @@ jobs:
       - name: Install modules
         run: npm ci
 
-      - name: Audit
-        run: npm run audit
+      - name: Lint
+        run: npm run lint
+
+      - name: Static Analysis
+        run: npm run ts
+
+      - name: Test
+        run: npm run test
+
+      # TODO:
+      # - name: Audit
+      #   run: npm run audit
