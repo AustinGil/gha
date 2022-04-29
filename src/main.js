@@ -6,4 +6,4 @@ const type = getType(doubled);
 
 const isNumber = isType(doubled, 'number');
 
-console.log(type, isNumber);
+console.log(type, isNumber)
