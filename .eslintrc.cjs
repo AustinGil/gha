@@ -1,20 +1,40 @@
+/**
+ * ESLint configuration file
+ * @see https://eslint.org/docs/user-guide/configuring/
+ */
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
     node: true,
   },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: [
+    '@typescript-eslint',
+    // 'jsdoc',
+    // 'security',
+    // 'unicorn',
+    // 'vue',
+    // 'vuejs-accessibility',
+    // 'react',
+    // 'jsx-a11y',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    // 'plugin:jsdoc/recommended',
+    // 'plugin:security/recommended',
+    // 'plugin:unicorn/recommended',
+    // 'plugin:vue/recommended',
+    // "plugin:vuejs-accessibility/recommended",
+    // 'plugin:react/recommended',
+    // 'plugin:jsx-a11y/recommended',
   ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  plugins: ['@typescript-eslint'],
   rules: {
     'comma-dangle': ['error', 'only-multiline'],
     quotes: [
@@ -31,5 +51,38 @@ module.exports = {
         trailingComma: 'es5',
       },
     ],
+
+    '@typescript-eslint/no-unused-vars': 'error',
+
+    // 'jsdoc/no-undefined-types': [
+    //   'error',
+    //   { definedTypes: ['Record', 'Pick', 'T', 'SubmitEvent'] },
+    // ],
+    // 'jsdoc/require-param-description': 'off',
+    // 'jsdoc/require-returns': 'off',
+    // 'jsdoc/require-property-description': 'off',
+    // 'jsdoc/valid-types': 'off',
+
+    // 'unicorn/explicit-length-check': 'off',
+    // 'unicorn/filename-case': 'off',
+    // 'unicorn/no-array-reduce': 'off',
+    // 'unicorn/no-null': 'off',
+    // 'unicorn/no-reduce': 'off',
+    // 'unicorn/no-useless-undefined': 'off',
+    // 'unicorn/prefer-ternary': 'off',
+    // 'unicorn/prevent-abbreviations': 'off',
+
+    // 'vue/require-prop-types': ['error']
+    // 'vue/max-attributes-per-line': 'off',
+    // 'vue/custom-event-name-casing': 'off',
+    // 'vue/no-template-shadow': 'off',
+    // 'vue/html-self-closing': [
+    //   'error',
+    //   {
+    //     html: {
+    //       void: 'any',
+    //     },
+    //   },
+    // ],
   },
 };

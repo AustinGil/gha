@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
+    "strict": true,
     "allowJs": true,
     "checkJs": true,
-    "alwaysStrict": true,
     "noEmit": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "files": [
+  "include": [
     "src/main.js"
   ],
   "exclude": [
