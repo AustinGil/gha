@@ -1,33 +1,17 @@
 import { describe, it, expect } from 'vitest';
-import { getType, double, isType } from './utils.js';
+import { getType } from './utils.js';
 
 describe('utils', () => {
   describe('getType()', () => {
-    it('should return the type of the given value', () => {
-      expect(getType(4)).toEqual('number');
-      expect(getType('4')).toEqual('string');
-      expect(getType(true)).toEqual('boolean');
-      expect(getType(null)).toEqual('null');
-      expect(getType(undefined)).toEqual('undefined');
-      expect(getType({})).toEqual('object');
-      expect(getType([])).toEqual('array');
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-      expect(getType(() => {})).toEqual('function');
-    });
-  });
-
-  describe('double()', () => {
-    it('should double the given value', () => {
-      expect(double(4)).toEqual(8);
-    });
-  });
-
-  describe('isType()', () => {
-    it('should return true or false for the appropriate type', () => {
-      expect(isType(4, 'number')).toEqual(true);
-      expect(isType(4, 'string')).toEqual(false);
-      expect(isType('yo', 'string')).toEqual(true);
-      expect(isType('yo', 'number')).toEqual(false);
+    it('should return expected parameter type', () => {
+      expect(getType('')).toBe('string');
+      expect(getType(0)).toBe('number');
+      expect(getType(null)).toBe('null');
+      expect(getType(undefined)).toBe('undefined');
+      expect(getType({})).toBe('object');
+      expect(getType([])).toBe('array');
+      // eslint-disable-next-line
+      expect(getType(() => { })).toBe('function');
     });
   });
 });

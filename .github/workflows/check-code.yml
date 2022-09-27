@@ -29,18 +29,3 @@ jobs:
       # TODO:
       # - name: Audit
       #   run: npm run audit
-name: Deploy
-on:
-  push:
-    branches:
-      - master
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2 
-      - uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.GH_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
